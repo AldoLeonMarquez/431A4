@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_020952) do
     t.string "author"
     t.string "genre"
     t.integer "price"
-    t.string "published-date"
+    t.string "publisheddate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
