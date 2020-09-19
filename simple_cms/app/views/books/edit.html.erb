@@ -1,0 +1,39 @@
+<%= link_to("<< Back to List", books_path, :class => 'back-link') %>
+
+<div class="books edit">
+  <h2>Update Book</h2>
+
+  <%= form_for(@book) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><%= f.text_field(:author) %></td>
+      </tr>
+      <tr>
+        <th>Genre</th>
+        <td><%= f.select(:genre,['Fantasy','Adventure','Romance''Contemporary','Dystopian',
+        'Mystery','Thriller','Paranormal','Historical','Fiction','Science Fiction',
+        'Memoir','Cooking','Art','Self-help / Personal','Development','Motivational',
+        'Health','History','Travel','Guide / How-to','Families & Relationships',
+        'Humor','Children’s'] ) %></td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td><%= f.text_field(:price) %></td>
+      </tr>
+      <tr>
+        <th>Publish Date</th>
+        <td><%= f.select(:published_date,(1800..2020).to_a.reverse) %></td>
+      </tr>
+    </table>
+    <div class="form-buttons">
+      <%= f.submit("Update Book") %>
+    </div>
+
+  <% end %>
+</div>
