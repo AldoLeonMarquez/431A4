@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <th>Publish Date</th>
-      <td><%= f.text_field(:date) %></td>
+      <td><%= f.select(:date,(1800..2020).to_a.reverse) %></td>
     </tr>
 
     </table>
